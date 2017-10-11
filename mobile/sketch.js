@@ -18,7 +18,7 @@ fill(51, 153, 255);
 		vertex(touches[i].x, touches[i].y);
 		textSize(40);
     text(touches[i].x, touches[i].x, touches[i].x);
-    text(touches[i].x, touches[i].x +100, touches[i].y);
+    text(touches[i].y, touches[i].x +100, touches[i].y);
 
 	}
 	endShape(CLOSE);
