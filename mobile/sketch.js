@@ -20,7 +20,7 @@ fill(51, 153, 255);
 	endShape(CLOSE);
 	fill(0,0,255);
 	for (var j = 0; j < touches.length; j++) {
-		rect(touches[j].x, touches[j].y, 150, 150);
+		ellipse(touches[j].x, touches[j].y, 150, 150);
 	}
 }
 
