@@ -25,7 +25,7 @@ function draw() {
 		strokeWeight(1);
 		fill(0);
 		textSize(20);
-		text(floor(touches[i].x) + "," + floor(touches[i].y), touches[i].x + 100, touches[i].y);
+		text(floor(touches[i].x) + "," + floor(touches[i].y), touches[i].x + 50, touches[i].y);
 
 	}
 }
