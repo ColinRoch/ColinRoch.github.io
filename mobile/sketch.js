@@ -18,7 +18,7 @@ fill(100, 200, 100);
 		vertex(touches[i].x, touches[i].y);
 	}
 	endShape(CLOSE);
-	fill(175, 255, 100);
+	fill(0,0,255);
 	for (var j = 0; j < touches.length; j++) {
 		rect(touches[j].x, touches[j].y, 150, 150);
 	}
