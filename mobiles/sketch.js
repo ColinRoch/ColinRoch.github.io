@@ -1,5 +1,6 @@
 document.ontouchmove = function(event){
  event.preventDefault();
+}
 
 function setup() {
  createCanvas(windowWidth,windowHeight);
@@ -22,5 +23,4 @@ function touchStarted() {
  textSize(40);
  text(touches[0].x, 100, 100);
  text(touches[0].y, 200, 100);
-}
 }
