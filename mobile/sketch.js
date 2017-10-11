@@ -17,11 +17,11 @@ fill(51, 153, 255);
 	for (var i = 0; i < touches.length; i++) {
 		vertex(touches[i].x, touches[i].y);
 		textSize(40);
-    text(touches[0].x, 50, 100);
-    text(touches[0].y, 200, 100);
-    text(touches[0].x, 400, 100);
-    text(touches[0].y, 600, 100);
-    text(touches[0].x, 800, 100);
+    text(touches[0].x, 100, 100);
+    text(touches[0].y, 250, 100);
+    text(touches[0].x, 450, 100);
+    text(touches[0].y, 650, 100);
+    text(touches[0].x, 850, 100);
 	}
 	endShape(CLOSE);
 	fill(0,0,255);
