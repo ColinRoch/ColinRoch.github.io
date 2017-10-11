@@ -20,7 +20,7 @@ function draw(){
 	endShape(CLOSE);
 	fill(175, 255, 100);
 	for (var j = 0; j < touches.length; j++) {
-		ellipse(touches[j].x, touches[j].y, 75, 75);
+		rect(touches[j].x, touches[j].y, 150, 150);
 	}
 
 function touchStarted() {
