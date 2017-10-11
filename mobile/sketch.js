@@ -17,7 +17,7 @@ fill(51, 153, 255);
 	for (var i = 0; i < touches.length; i++) {
 		vertex(touches[i].x, touches[i].y);
 		textSize(40);
-    text(touches[0].x, 100, 100);
+    text(touches[0].x, 50, 100);
     text(touches[0].y, 250, 100);
     text(touches[0].x, 450, 100);
     text(touches[0].y, 650, 100);
