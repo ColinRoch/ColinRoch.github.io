@@ -11,17 +11,12 @@ function setup() {
 }
 
 function draw(){
-  background(255);
-  fill(100, 200, 100);
-	beginShape();
-	for (var i = 0; i < touches.length; i++) {
-		vertex(touches[i].x, touches[i].y);
-	}
-	endShape(CLOSE);
-	fill(175, 255, 100);
-	for (var j = 0; j < touches.length; j++) {
-		rect(touches[j].x, touches[j].y, 150, 150);
-	}
+ background(255);
+ 
+ for(var i=0;i<touches.length;i++){
+  rect(touches[i].x,touches[i].y,150,150);
+  }
+}
 
 function touchStarted() {
   background(255);
