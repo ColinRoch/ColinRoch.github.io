@@ -7,7 +7,7 @@ function setup() {
   ax = 0;
   ay = 0;
   bsize = 200;
-  vMultiplier = 0.02;
+  vMultiplier = 0.01;
   px = windowWidth/2;
   py = windowHeight/2;
 }
@@ -18,7 +18,7 @@ function draw() {
   text("Rx: " + rotationX, 100, 100);
   text("Ry: " + rotationY, 100, 150);
   text("Rz: " + rotationZ, 100, 200);
-  text("test 1 ", 100, 250);
+  text("test 1.1 ", 100, 250);
   drawBille();
 }
 
