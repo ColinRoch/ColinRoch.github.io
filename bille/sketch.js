@@ -6,7 +6,7 @@ function setup() {
   vy = 0;
   ax = 0;
   ay = 0;
-  vMultiplier = 0.05;
+  vMultiplier = 0.02;
   px = windowWidth/2;
   py = windowHeight/2;
 }
