@@ -1,4 +1,11 @@
 var px, py, vx, vy, ax, ay, vMultiplier, bsize;
+//var images = 0;
+//var img = [img1];
+
+function preload() {
+  img1 = loadImage("images/colin1.jpg");
+  img2 = loadImage("images/colin2.jpg");
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -18,19 +25,20 @@ function draw() {
   text("Rx: " + rotationX, 100, 100);
   text("Ry: " + rotationY, 100, 150);
   text("Rz: " + rotationZ, 100, 200);
-  text("test 1.1 ", 100, 250);
+  text("test 1.2 ", 100, 250);
   drawBille();
 }
 
 function drawBille() {
-  fill(50, 50, 50);
+  image (img1, px, py);
+  //fill(50, 50, 50);
   ax = rotationY * vMultiplier;
   ay = rotationX * vMultiplier;
   vx += ax;
   vy += ay
   px += vx;
   py += vy;
-  ellipse(px, py, bsize, bsize);
+  //ellipse(px, py, bsize, bsize);
   //fill(0,0,0);
   //ellipse(px + 5, py - 5, 190);
   //fill(80,80,80);
