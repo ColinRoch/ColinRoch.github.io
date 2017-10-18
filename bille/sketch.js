@@ -22,6 +22,7 @@ function drawBille(){
   fill(0,0,0);
   ellipse(px, py, 200);
   ax = rotationY * vMultiplier;
+  ay = rotationX * vMultiplier;
   vx += ax;
   px += vx;
   px = vx;
