@@ -3,8 +3,8 @@ var px, py, vx, vy, ax, ay, vMultiplier, bsize;
 //var img = [img1];
 
 function preload() {
-  img1 = loadImage("images/colin1.jpg");
-  img2 = loadImage("images/colin2.jpg");
+  img1 = loadImage("image/colin1.jpg");
+  img2 = loadImage("image/colin2.jpg");
 }
 
 function setup() {
