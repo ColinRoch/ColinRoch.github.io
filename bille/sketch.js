@@ -1,10 +1,10 @@
-var px, py, vx, vy, ax, ay, vMultiplier, bsize;
+var px, py, vx, vy, ax, ay, vMultiplier, bsizex, bsizey;
 //var images = 0;
 //var img = [img1];
 
 function preload() {
-  img1 = loadImage("image/colin1.jpg");
-  img2 = loadImage("image/colin2.jpg");
+  img1 = loadImage("image/colin3.jpg");
+  img2 = loadImage("image/colin4.jpg");
 }
 
 function setup() {
@@ -13,7 +13,8 @@ function setup() {
   vy = 0;
   ax = 0;
   ay = 0;
-  bsize = 200;
+  bsizex = 200;
+  bsizey = 175;
   vMultiplier = 0.01;
   px = windowWidth/2;
   py = windowHeight/2;
@@ -25,12 +26,12 @@ function draw() {
   text("Rx: " + rotationX, 100, 100);
   text("Ry: " + rotationY, 100, 150);
   text("Rz: " + rotationZ, 100, 200);
-  text("test 1.3 ", 100, 250);
+  text("test 1.4 ", 100, 250);
   drawBille();
 }
 
 function drawBille() {
-  image (img1, px, py, bsize, bsize);
+  image (img1, px, py, bsizey, bsizex);
   //fill(50, 50, 50);
   ax = rotationY * vMultiplier;
   ay = rotationX * vMultiplier;
@@ -45,20 +46,20 @@ function drawBille() {
   //ellipse(px + 27, py - 27, 120);
   //fill(255,255,255);
   //ellipse(px + 45, py - 45, 50);
-  if (px > windowWidth - bsize / 2) {
-		px = windowWidth - bsize / 2;
+  if (px > windowWidth - bsizex / 2) {
+		px = windowWidth - bsizex / 2;
 		vx = -vx;
 	}
-	if (px < 0 + bsize / 2) {
-		px = 0 + bsize / 2;
+	if (px < 0 + bsizex / 2) {
+		px = 0 + bsizex / 2;
 		vx = -vx;
 	}
-	if (py > windowHeight - bsize / 2) {
-		py = windowHeight - bsize / 2;
+	if (py > windowHeight - bsizey / 2) {
+		py = windowHeight - bsizey / 2;
 		vy = -vy;
 	}
-	if (py < 0 + bsize / 2) {
-		py = 0 + bsize / 2;
+	if (py < 0 + bsizey / 2) {
+		py = 0 + bsizey / 2;
 		vy = -vy;
 	}
 }
