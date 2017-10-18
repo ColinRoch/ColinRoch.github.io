@@ -25,12 +25,12 @@ function draw() {
   text("Rx: " + rotationX, 100, 100);
   text("Ry: " + rotationY, 100, 150);
   text("Rz: " + rotationZ, 100, 200);
-  text("test 1.2 ", 100, 250);
+  text("test 1.3 ", 100, 250);
   drawBille();
 }
 
 function drawBille() {
-  image (img1, px, py);
+  image (img1, px, py, bsize, bsize);
   //fill(50, 50, 50);
   ax = rotationY * vMultiplier;
   ay = rotationX * vMultiplier;
