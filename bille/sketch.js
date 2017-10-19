@@ -22,8 +22,8 @@ function setup() {
 function draw() {
   background(255, value, 0);
   textSize(15);
-  text("Rx: " + floor(rotationX), 5, 5);
-  text("Ry: " + floor(rotationY), 5, 25);
+  text("Rx: " + floor(rotationX), 5, 15);
+  text("Ry: " + floor(rotationY), 5, 30);
   drawBille();
 }
 
@@ -46,15 +46,15 @@ function drawBille() {
 
   if (px > windowWidth - bsizex / 2) {
     px = windowWidth - bsizex / 2;
-    vx = -vx;
+    vx = -vx * 0.3;
   }
   if (px < 0 + bsizex / 2) {
     px = 0 + bsizex / 2;
-    vx = -vx;
+    vx = -vx * 0.3;
   }
   if (py > windowHeight - bsizex / 2) {
     py = windowHeight - bsizex / 2;
-    vy = -vy;
+    vy = -vy * 0.3;
   }
   if (py < 0 + bsizex / 2) {
     py = 0 + bsizex / 2;
