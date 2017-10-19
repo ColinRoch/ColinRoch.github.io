@@ -24,7 +24,7 @@ function setup() {
 function draw() {
   background(value);
   textSize(15);
-  text("Version 2", 5, 15);
+  text("Version 3", 5, 15);
   text("Rx: " + floor(rotationX), 5, 30);
   text("Ry: " + floor(rotationY), 5, 45);
   drawBille();
