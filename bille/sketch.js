@@ -15,6 +15,7 @@ function setup() {
   vMultiplier = 0.01;
   px = windowWidth/2;
   py = windowHeight/2;
+  imageMode(CENTER);
 }
 
 function draw() {
@@ -23,7 +24,7 @@ function draw() {
   text("Rx: " + rotationX, 100, 100);
   text("Ry: " + rotationY, 100, 150);
   text("Rz: " + rotationZ, 100, 200);
-  text("test 1.5 ", 100, 250);
+  text("test 1.6 ", 100, 250);
   drawBille();
 }
 
