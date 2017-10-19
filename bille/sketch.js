@@ -2,6 +2,7 @@ var px, py, vx, vy, ax, ay, vMultiplier, bsizex, bsizey, value;
 
 function preload() {
   img1 = loadImage("image/colin3.png");
+  img2 = loadImage("image/colin4.png");
 }
 
 function setup() {
@@ -15,12 +16,12 @@ function setup() {
   vMultiplier = 0.01;
   px = windowWidth / 2;
   py = windowHeight / 2;
-  value = 0;
+  value = 250;
   imageMode(CENTER);
 }
 
 function draw() {
-  background(255, value, 0);
+  background(value);
   textSize(15);
   text("Rx: " + floor(rotationX), 5, 15);
   text("Ry: " + floor(rotationY), 5, 30);
@@ -47,18 +48,22 @@ function drawBille() {
   if (px > windowWidth - bsizex / 2) {
     px = windowWidth - bsizex / 2;
     vx = -vx * 0.3;
+    img1 = img2;
   }
   if (px < 0 + bsizex / 2) {
     px = 0 + bsizex / 2;
     vx = -vx * 0.3;
+    img1 = img2;
   }
   if (py > windowHeight - bsizex / 2) {
     py = windowHeight - bsizex / 2;
     vy = -vy * 0.3;
+    img2 = img1;
   }
   if (py < 0 + bsizex / 2) {
     py = 0 + bsizex / 2;
     vy = -vy * 0.3;
+    img2 = img1;
   }
 }
 
