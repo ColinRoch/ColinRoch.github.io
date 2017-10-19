@@ -51,7 +51,9 @@ function drawBille() {
     px = windowWidth - bsizex / 2;
     vx = -vx * 0.3;
     pic = img1;
-  } 
+  } else if(pic===img1){
+    pic=img2;
+  }
   if (px < 0 + bsizex / 2) {
     px = 0 + bsizex / 2;
     vx = -vx * 0.3;
