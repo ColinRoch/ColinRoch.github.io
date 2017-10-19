@@ -21,11 +21,10 @@ function setup() {
 
 function draw() {
   background(255, value, 0);
-  textSize(40);
-  text("Rx: " + rotationX, 100, 100);
-  text("Ry: " + rotationY, 100, 150);
-  text("Rz: " + rotationZ, 100, 200);
-  text("test 1.7 ", 100, 250);
+  textSize(20);
+  text("Rx: " + floor(rotationX), 100, 100);
+  text("Ry: " + floor(rotationY), 100, 150);
+  text("test 1.8 ", 100, 250);
   drawBille();
 }
 
