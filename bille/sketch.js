@@ -24,7 +24,7 @@ function setup() {
 function draw() {
   background(value);
   textSize(15);
-  text("Version 3", 5, 15);
+  text("Version 4", 5, 15);
   text("Rx: " + floor(rotationX), 5, 30);
   text("Ry: " + floor(rotationY), 5, 45);
   drawBille();
@@ -47,12 +47,15 @@ function drawBille() {
   //ellipse(px + 45, py - 45, 50);
   image(pic, px, py, bsizey, bsizex);
 
-  if (px > windowWidth - bsizex / 2) {
-    px = windowWidth - bsizex / 2;
+  if (px > windowWidth - bsizex / 2 || pic === img2) {
+    px = windowWidth - (bsizex / 2) - 50;
     vx = -vx * 0.3;
     pic = img1;
-  } else if(pic===img1){
-    pic=img2;
+  }
+  if (px > windowWidth - bsizex / 2 || pic === img1) {
+    px = windowWidth - (bsizex / 2) + 50;
+    vx = -vx * 0.3;
+    pic = img2;
   }
   if (px < 0 + bsizex / 2) {
     px = 0 + bsizex / 2;
