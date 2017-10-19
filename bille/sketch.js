@@ -10,8 +10,8 @@ function setup() {
   vy = 0;
   ax = 0;
   ay = 0;
-  bsizex = 200;
-  bsizey = 175;
+  bsizex = 200 / 2;
+  bsizey = 175 / 2;
   vMultiplier = 0.01;
   px = windowWidth / 2;
   py = windowHeight / 2;
@@ -23,7 +23,7 @@ function draw() {
   background(255, value, 0);
   textSize(15);
   text("Rx: " + floor(rotationX), 5, 5);
-  text("Ry: " + floor(rotationY), 5, 20);
+  text("Ry: " + floor(rotationY), 5, 25);
   drawBille();
 }
 
@@ -58,7 +58,7 @@ function drawBille() {
   }
   if (py < 0 + bsizex / 2) {
     py = 0 + bsizex / 2;
-    vy = -vy;
+    vy = -vy * 0.3;
   }
 }
 
