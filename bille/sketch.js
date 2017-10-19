@@ -1,4 +1,4 @@
-var px, py, vx, vy, ax, ay, vMultiplier, bsizex, bsizey;
+var px, py, vx, vy, ax, ay, vMultiplier, bsizex, bsizey, value;
 
 function preload() {
   img1 = loadImage("image/colin3.jpg");
@@ -13,18 +13,19 @@ function setup() {
   bsizex = 200;
   bsizey = 175;
   vMultiplier = 0.01;
-  px = windowWidth/2;
-  py = windowHeight/2;
+  px = windowWidth / 2;
+  py = windowHeight / 2;
+  value = 0;
   imageMode(CENTER);
 }
 
 function draw() {
-  background(255);
+  background(255, value, 0);
   textSize(40);
   text("Rx: " + rotationX, 100, 100);
   text("Ry: " + rotationY, 100, 150);
   text("Rz: " + rotationZ, 100, 200);
-  text("test 1.6 ", 100, 250);
+  text("test 1.7 ", 100, 250);
   drawBille();
 }
 
@@ -43,22 +44,29 @@ function drawBille() {
   //ellipse(px + 27, py - 27, 120);
   //fill(255,255,255);
   //ellipse(px + 45, py - 45, 50);
-    image (img1, px, py, bsizey, bsizex);
+  image(img1, px, py, bsizey, bsizex);
 
   if (px > windowWidth - bsizex / 2) {
-		px = windowWidth - bsizex / 2;
-		vx = -vx;
-	}
-	if (px < 0 + bsizex / 2) {
-		px = 0 + bsizex / 2;
-		vx = -vx;
-	}
-	if (py > windowHeight - bsizex / 2) {
-		py = windowHeight - bsizex / 2;
-		vy = -vy;
-	}
-	if (py < 0 + bsizex / 2) {
-		py = 0 + bsizex / 2;
-		vy = -vy;
-	}
+    px = windowWidth - bsizex / 2;
+    vx = -vx;
+  }
+  if (px < 0 + bsizex / 2) {
+    px = 0 + bsizex / 2;
+    vx = -vx;
+  }
+  if (py > windowHeight - bsizex / 2) {
+    py = windowHeight - bsizex / 2;
+    vy = -vy;
+  }
+  if (py < 0 + bsizex / 2) {
+    py = 0 + bsizex / 2;
+    vy = -vy;
+  }
+}
+
+function deviceShaken() {
+  value = value + 5;
+  if (value > 255) {
+    value = 0;
+  }
 }
