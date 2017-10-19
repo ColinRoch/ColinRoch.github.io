@@ -1,10 +1,7 @@
 var px, py, vx, vy, ax, ay, vMultiplier, bsizex, bsizey;
-//var images = 0;
-//var img = [img1];
 
 function preload() {
   img1 = loadImage("image/colin3.jpg");
-  img2 = loadImage("image/colin4.jpg");
 }
 
 function setup() {
@@ -31,7 +28,6 @@ function draw() {
 }
 
 function drawBille() {
-  image (img1, px, py, bsizey, bsizex);
   //fill(50, 50, 50);
   ax = rotationY * vMultiplier;
   ay = rotationX * vMultiplier;
@@ -46,6 +42,8 @@ function drawBille() {
   //ellipse(px + 27, py - 27, 120);
   //fill(255,255,255);
   //ellipse(px + 45, py - 45, 50);
+    image (img1, px, py, bsizey, bsizex);
+
   if (px > windowWidth - bsizex / 2) {
 		px = windowWidth - bsizex / 2;
 		vx = -vx;
