@@ -1,7 +1,7 @@
 var px, py, vx, vy, ax, ay, vMultiplier, bsizex, bsizey, value;
 
 function preload() {
-  img1 = loadImage("image/colin3.jpg");
+  img1 = loadImage("image/colin3.png");
 }
 
 function setup() {
@@ -21,10 +21,10 @@ function setup() {
 
 function draw() {
   background(255, value, 0);
-  textSize(20);
+  textSize(30);
   text("Rx: " + floor(rotationX), 100, 100);
   text("Ry: " + floor(rotationY), 100, 150);
-  text("test 1.8 ", 100, 250);
+  text("test 1.9 ", 100, 250);
   drawBille();
 }
 
