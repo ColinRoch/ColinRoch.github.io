@@ -58,12 +58,12 @@ function drawBille() {
   if (py > windowHeight - bsizex / 2) {
     py = windowHeight - bsizex / 2;
     vy = -vy * 0.3;
-    img2 = img1;
+    img1 = img1;
   }
   if (py < 0 + bsizex / 2) {
     py = 0 + bsizex / 2;
     vy = -vy * 0.3;
-    img2 = img1;
+    img1 = img1;
   }
 }
 
