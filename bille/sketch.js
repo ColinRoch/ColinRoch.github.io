@@ -23,7 +23,7 @@ function draw() {
   text("Rx: " + rotationX, 100, 100);
   text("Ry: " + rotationY, 100, 150);
   text("Rz: " + rotationZ, 100, 200);
-  text("test 1.4 ", 100, 250);
+  text("test 1.5 ", 100, 250);
   drawBille();
 }
 
@@ -52,12 +52,12 @@ function drawBille() {
 		px = 0 + bsizex / 2;
 		vx = -vx;
 	}
-	if (py > windowHeight - bsizey / 2) {
-		py = windowHeight - bsizey / 2;
+	if (py > windowHeight - bsizex / 2) {
+		py = windowHeight - bsizex / 2;
 		vy = -vy;
 	}
-	if (py < 0 + bsizey / 2) {
-		py = 0 + bsizey / 2;
+	if (py < 0 + bsizex / 2) {
+		py = 0 + bsizex / 2;
 		vy = -vy;
 	}
 }
