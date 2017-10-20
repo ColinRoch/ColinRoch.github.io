@@ -24,27 +24,19 @@ function setup() {
 function draw() {
   background(value);
   textSize(15);
-  text("Version 6", 5, 15);
+  text("Version Finale", 5, 15);
   text("Rx: " + floor(rotationX), 5, 30);
   text("Ry: " + floor(rotationY), 5, 45);
   drawBille();
 }
 
 function drawBille() {
-  //fill(50, 50, 50);
   ax = rotationY * vMultiplier;
   ay = rotationX * vMultiplier;
   vx += ax;
   vy += ay
   px += vx;
   py += vy;
-  //ellipse(px, py, bsize, bsize);
-  //fill(0,0,0);
-  //ellipse(px + 5, py - 5, 190);
-  //fill(80,80,80);
-  //ellipse(px + 27, py - 27, 120);
-  //fill(255,255,255);
-  //ellipse(px + 45, py - 45, 50);
   image(pic, px, py, bsizey, bsizex);
 
   if (px > windowWidth - bsizex / 2) {
